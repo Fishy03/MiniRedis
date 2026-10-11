@@ -1,4 +1,4 @@
-package com.miniredis;
+package com.miniredis.client;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
