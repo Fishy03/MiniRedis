@@ -22,8 +22,19 @@ public class MiniRedisClient {
 
             while (true) {
                 System.out.print("MiniRedis> ");
-                String command = scanner.nextLine();
+                
+                String command;
 
+                try
+                {
+                    command = scanner.nextLine();
+                }
+                catch(java.util.NoSuchElementException e)
+                {
+                    System.out.println("\nClient closed");
+                    break;
+                }
+                
                 if (command.equalsIgnoreCase("QUIT")) {
                     break;
                 }

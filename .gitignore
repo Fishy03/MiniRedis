@@ -10,4 +10,5 @@ target/
 
 # OS files
 .DS_Store
-Thumbs.db
+Thumbs.dbminiredis-data.properties
+/miniredis-data.properties
