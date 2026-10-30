@@ -1,13 +1,13 @@
 package com.miniredis.command;
 
-import com.miniredis.store.InMemoryStore;
+import com.miniredis.store.Store;
 
 public class CommandHandler {
 
     private final CommandParser parser;
     private final CommandExecutor executor;
 
-    public CommandHandler(InMemoryStore store) {
+    public CommandHandler(Store store) {
         this.parser = new CommandParser();
         this.executor = new CommandExecutor(store);
     }

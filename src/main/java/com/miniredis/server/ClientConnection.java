@@ -1,7 +1,8 @@
 package com.miniredis.server;
 
 import com.miniredis.command.CommandHandler;
-import com.miniredis.store.InMemoryStore;
+// import com.miniredis.store.InMemoryStore;
+import com.miniredis.store.Store;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,9 +14,11 @@ import java.nio.charset.StandardCharsets;
 public class ClientConnection extends Thread {
 
     private final Socket socket;
-    private final InMemoryStore store;
+    // private final InMemoryStore store;
+    private final Store store;
 
-    public ClientConnection(Socket socket, InMemoryStore store) {
+    // public ClientConnection(Socket socket, InMemoryStore store) 
+    public ClientConnection(Socket socket, Store store){
         this.socket = socket;
         this.store = store;
     }

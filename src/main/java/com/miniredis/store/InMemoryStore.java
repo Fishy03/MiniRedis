@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /** Thread-safe in-memory key-value store with TTL and snapshot persistence. */
-public class InMemoryStore {
+public class InMemoryStore implements Store {
     private final Map<String, String> data = new HashMap<>();
     // Expiration time in epoch milliseconds; absent means no expiration.
     private final Map<String, Long> expiresAt = new HashMap<>();
