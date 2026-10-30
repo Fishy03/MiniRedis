@@ -12,3 +12,6 @@ target/
 .DS_Store
 Thumbs.dbminiredis-data.properties
 /miniredis-data.properties
+
+# MiniRedis generated database
+miniredis-data.dat
